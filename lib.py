@@ -162,7 +162,7 @@ def load_data_from_csv(path):
     random.shuffle(data)
 
     train_size = int(len(data) * 0.7)
-    dev_size = int(len(data) * 0.1)
+    dev_size = int(len(data) * 0.3)
     return data[:train_size], data[train_size:train_size+dev_size], data[train_size+dev_size:]
 
 

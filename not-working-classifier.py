@@ -16,11 +16,13 @@ tweets = X;
 bully_prob = 0;
 non_bully_prob = 0;
 for i in range(len(tweets)):
-    if (y[i]):
+    if (y[i] == "1"):
         bully_prob += 1;
-
+#print bully_prob
 bully_prob /= 1.0 * len(tweets);
 non_bully_prob = 1 - bully_prob;
+#print len(tweets)
+#print bully_prob
 
 #feat count of in label
 bully_count = {};
@@ -39,7 +41,7 @@ for i in range(len(tweets)): #list of tweets
         if (word not in non_bully_count.keys()):
             non_bully_count[word] = 0;
 
-        if (y[i] == 1):
+        if (y[i] == "1"):
             bully_count[word] += 1;
 
         else:
@@ -69,11 +71,11 @@ for tweet in X_dev:
         # print(in_bully_prob, not_in_bully_prob);
 
     if (in_bully_prob > not_in_bully_prob):
-        predictions.append(0)
+        predictions.append("0")
     else:
-        predictions.append(1)
+        predictions.append("1")
 
 from sklearn.metrics import accuracy_score
 print accuracy_score(y_dev, predictions)
-print "dev: " + y_dev
-print "predictions: " + predictions
+print ("dev",y_dev)
+print ("predictions: ", predictions)
