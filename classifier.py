@@ -127,9 +127,6 @@ def classify(model, datum):
     else:
       false_score += log(false_probs['__UNK__'])
 
-    if (feature == "tweet"):
-        print true_probs[feature]
-
   # Some error checking
   if isinf(true_score) or isinf(false_score):
     print "WARNING: either true_score or false_score is infinite"
@@ -155,15 +152,14 @@ if __name__ == "__main__":
   # Evaluate the classifier
   in_class = []
   not_in_class = []
-  print type(dev_data[0])
   for datum in dev_data:
     if classify(classifier, datum):
       in_class.append(datum)
     else:
       not_in_class.append(datum)
-  #evaluate(target_class, in_class, not_in_class)
+  evaluate(target_class, in_class, not_in_class)
 
-  for tweet in ["go kill yourself", "drink bleach", "i like pie", "you are a terrible person", "from"]:
+  for tweet in ["go kill yourself", "drink bleach", "i like pie", "you are a terrible person", "you are my hero"]:
       if classify(classifier, Datum(tweet, '0')):
           print "bullying"
       else:
