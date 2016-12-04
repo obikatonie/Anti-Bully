@@ -12,9 +12,8 @@ auth = OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_secret)
 api = tweepy.API(auth, wait_on_rate_limit=True)
 
-# print first 10 tweets on timeline
-for status in tweepy.Cursor(api.home_timeline).items(10):
-    print (status.text.encode('utf-8'))
+for status in tweepy.Cursor(api.home_timeline).items(3):
+    # print (status.text.encode('utf-8')+"\n")
+    api.update_status("@123bananabot test reply", status.id)
 
-# tweet something
-api.update_status(status="test tweet from tweepy")
+print ("finished")
