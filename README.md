@@ -1,5 +1,6 @@
 # Anti-Bully
 Hack Harassment EV Hacks II
+Devpost Submission: https://devpost.com/software/anti-bully
 
 ##Inspiration
 Cyberbullying is an extremely prevalent issue in the modern digital world. Yet many social media platforms such as Twitter don’t have intelligent cyberbullying detection systems so they don’t effectively address this issue. Because of this, we wanted to create a classifier using artificial intelligence to determine whether a tweet is cyberbullying or not.
