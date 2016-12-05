@@ -20,7 +20,7 @@ auth.set_access_token(access_token, access_secret)
 api = tweepy.API(auth, wait_on_rate_limit=True)
 
 for status in tweepy.Cursor(api.home_timeline).items(1):
-    print "tweet:"+ status.text.encode('utf-8')
+    print "tweet: "+ status.text.encode('utf-8')
     # get rid of punctuation
     tweet = status.text
     tweet = "".join(l for l in tweet if l not in string.punctuation)
