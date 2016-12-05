@@ -199,10 +199,10 @@ def evaluate(label, guessedTrue, guessedFalse):
     recall = (truePositives)/(truePositives + falseNegatives)
     F1 = (2.0 * precision * recall) /(precision + recall if precision + recall > 0 else 1)
 
-    print "Accuracy:  %.3g" % (accuracy * 100.0)
-    print "Precision: %.3g" % (precision * 100.0)
+    #print "Accuracy:  %.3g" % (accuracy * 100.0)
+    #print "Precision: %.3g" % (precision * 100.0)
     print "Recall:    %.3g" % (recall * 100.0)
-    print "F1:        %.3g" % (F1 * 100.0)
+    #print "F1:        %.3g" % (F1 * 100.0)
 
 
 
