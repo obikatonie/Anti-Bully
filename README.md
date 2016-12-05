@@ -1,5 +1,6 @@
 # Anti-Bully
 Hack Harassment EV Hacks II  
+Best Application award winner at EV Hacks II (uses machine learning to detect cyberbullying and automatically warn the user)  
 Devpost Submission: https://devpost.com/software/anti-bully
 
 ##Inspiration
