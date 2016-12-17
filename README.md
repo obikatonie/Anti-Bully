@@ -1,6 +1,13 @@
 # Anti-Bully
 Hack Harassment EV Hacks II  
+Best Application award winner at EV Hacks II (uses machine learning to detect cyberbullying and automatically warn the user)  
 Devpost Submission: https://devpost.com/software/anti-bully
+
+##To Run
+- Note: The classifier is associated with a certain user's timeline, so it will only check those tweets.
+- Tweet something to the user
+- Run the code, either badwords.py in the word-dictionary folder (will check tweet against known list of bad / negative words), or classifier.py in the naive-bayes-classifier folder. 
+- Check the comments under the tweet; there should be either a message warning the user not to bully, or a message saying the tweet is was not classified as bullying. 
 
 ##Inspiration
 Cyberbullying is an extremely prevalent issue in the modern digital world. Yet many social media platforms such as Twitter don’t have intelligent cyberbullying detection systems so they don’t effectively address this issue. Because of this, we wanted to create a classifier using artificial intelligence to determine whether a tweet is cyberbullying or not.
