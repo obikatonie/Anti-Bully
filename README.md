@@ -22,7 +22,8 @@ We used Python for the entire project, utilizing the Twitter API for searching f
 The first main challenge we ran into was finding a good dataset. Not many well labeled cyberbullying datasets exist, and we spent many hours trying to find a good dataset. We also had difficulty getting the classifier to work (tokenizing the input tweets) and dealing with unknown (previously unencountered words). Furthermore, since we were using a free version of the twitter API, there was a hard limit on the number of API requests we could make, causing many delays in testing.
 
 ##Accomplishments that we're proud of
-We achieved a very high accuracy of 93%, which is much better than most existing models which only achieve 50-70%. This accuracy could be improved even further if we had a better labeled dataset (the one we used had many mislabeled tweets which threw off the classifier).
+- Getting twitter API to work
+- Classifier performs quite well on test tweets the judges came up with (despite a pretty badly mislabeled dataset)
 
 ##What we learned
 We learned how to use the Twitter API from scratch, as well as how to code an effective naive bayes classifier. We also realized that finding good data was necessary for an accurate algorithm.
