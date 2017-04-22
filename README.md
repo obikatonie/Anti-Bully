@@ -6,6 +6,7 @@
 ## To Run
 - Note: The classifier is associated with a certain user's timeline, so it will only check those tweets.
 - Clone or download the repo
+- Configure the API keys in the badwords.py program for your Twitter account
 - Tweet something to the user
 - Run the code, either badwords.py in the word-dictionary folder (will check tweet against known list of bad / negative words), or classifier.py in the naive-bayes-classifier folder. 
 - Check the comments under the tweet; there should be either a message warning the user not to bully, or a message saying the tweet is was not classified as bullying. 
