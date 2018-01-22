@@ -9,22 +9,9 @@ import re
 import random
 import json
 
-# Import our library functions from lib.py
-# Feel free to take a look at these if you're feeling adventurous!
 from lib import *
 
-# -----------------------------------------------------------------------------
-# BEGIN NAIVE BAYES CODE
-# -----------------------------------------------------------------------------
-
 def featurize(datum):
-    """
-    Featurize a particular example.
-    @param datum: This is a single datum that we are featurizing
-    @return A set of features for that datum. For example, unigram and bigram features.
-    For the input 'Gabor is awesome', the output would be, set('Gabor',
-    '^_Gabor', 'is', 'Gabor_is', 'awesome', 'is_awesome').
-    """
     features = []
     last_word = '^'
     for word in lower(datum):
@@ -35,15 +22,7 @@ def featurize(datum):
 
 
 def train_classifier(data, class_of_interest):
-  """
-  Train a Naive Bayes classifier from a given dataset.
-  @param data:Datum[] The dataset to train from, as a list of Datum objects.
-                      see load_data_from_csv, which returns a triple of such lists.
-  @param class_of_interest:String The class we are classifying into (e.g., 'Food')
-  @return A classifier object. This is just a triple of the tables for p(c) and
-                                p(f | c_true) and p(f | c_false).
-  """
-
+ 
   # 1. Collect count(c)
   # The total number of times we see each label.
   # This should have counts for 'True' (needs food), and 'False' (doesn't need food)
@@ -94,14 +73,6 @@ def train_classifier(data, class_of_interest):
 
 
 def classify(model, datum):
-  """
-  Predict the label for a datum. This function should take a datum (without a known label!), and
-  output True if the datum is about food, and false otherwise.
-  @param model The triple that contains the Naive Bayes counts. This is the output
-               of the function train_classifier().
-  @param datum A datum that we should classify into the 'Food' versus 'Not Food' category.
-  @return True if the datum is about food, and false otherwise.
-  """
 
   # Unpack the model
   [total_probs, true_probs, false_probs] = model
@@ -136,9 +107,6 @@ def classify(model, datum):
 
 
 if __name__ == "__main__":
-  """
-    The entry point of your code.
-  """
   # The free variables to set
   filename = 'datasets/new_data.csv'
   target_class = '1'
